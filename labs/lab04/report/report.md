@@ -1,6 +1,6 @@
 ---
 ## Front matter
-title: "Шаблон отчёта по лабораторной работе N4"
+title: "Шаблон отчёта по лабораторной работa Nº 4"
 subtitle: "Gitflow"
 author: "Кхари Жекка Кализая Арсе"
 
@@ -268,6 +268,11 @@ header-includes:
         Соглашение `@commitlint/config-conventional` входит в пакет `Conventional Changelog`. В целом в этом соглашении придерживаются соглашения Angular.
 
 Более подробно про Unix см. в [@tanenbaum_book_modern-os_ru; @robbins_book_bash_en; @zarrelli_book_mastering-bash_en; @newham_book_learning-bash_en].
+
+
+
+
+
 
 # Выполнение лабораторной работы
 
