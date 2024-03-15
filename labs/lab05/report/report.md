@@ -371,18 +371,20 @@ other operating system
 
 Более подробно про Unix см. в [@tanenbaum_book_modern-os_ru; @robbins_book_bash_en; @zarrelli_book_mastering-bash_en; @newham_book_learning-bash_en].
 
+
+
 # Выполнение лабораторной работы
 
 ## установка 
 
-я начал эту лабораторную работу, устанавливая pass и gopass (рис. [-@fig:001]) (рис. [-@fig:001]).
+я начал эту лабораторную работу, устанавливая pass и gopass (рис. [-@fig:001]) (рис. [-@fig:002]).
         
             dnf install pass pass-otp
             dnf install gopass
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![Установка pass](image/imagen1.png){#fig:001 width=70%}
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![установка gopass](image/imagen2.png){#fig:002 width=70%}
 
 
 
@@ -390,11 +392,11 @@ other operating system
 
 ## настройка
 
-Потом я настроил ключ gpg (рис. [-@fig:001]).
+Потом я настроил ключ gpg (рис. [-@fig:003]).
 
             gpg --list-secret-keys
             
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![настройка ключа](image/imagen3.png){#fig:003 width=70%}
 
 
 
@@ -402,13 +404,13 @@ other operating system
 
 У меня уже ключ, поэтому я не создал новой ключ.
 
-Затем я инициализироовал хранилища (рис. [-@fig:001]).
+Затем я инициализироовал хранилища (рис. [-@fig:004]).
 
             pass init <gpg-id or email>
 
             pass git init
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![инициализация](image/imagen4.png){#fig:004 width=70%}
 
 
 
@@ -422,88 +424,88 @@ other operating system
             pass git pull
             pass git push
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![синхронизация](image/imagen5.png){#fig:005 width=70%}
 
 
 
 
 
 
-Потом я сделал изменение непосредственно на файловой системе и закоммитить вручную изменения. (рис. [-@fig:001]).
+Потом я сделал изменение непосредственно на файловой системе и закоммитить вручную изменения. (рис. [-@fig:006]).
 
             cd ~/.password-store/
             git add .
             git commit -am 'edit manually'
             git push
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![загрузка на сервер](image/imagen6.png){#fig:006 width=70%}
 
 
 
 
 
 
-Затем я проверил статус синхронизации (рис. [-@fig:001]).
+Затем я проверил статус синхронизации (рис. [-@fig:007]).
 
             pass git status
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![Status](image/imagen7.png){#fig:007 width=70%}
 
 
 
 ## Настройка интерфейса с броузером
 
-Во-первых я установил add-on в броузере (рис. [-@fig:001]).
+Во-первых я установил add-on в броузере (рис. [-@fig:008]).
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
-
-
+![Настройка браузера](image/imagen8.png){#fig:008 width=70%}
 
 
-Во-вторых я установил browser pass. (рис. [-@fig:001]) и (рис. [-@fig:001]) .
+
+
+Во-вторых я установил browser pass. (рис. [-@fig:009]) и (рис. [-@fig:010]) .
 
             dnf copr enable maximbaz/browserpass
             dnf install browserpass
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![установка browserpass](image/imagen9.png){#fig:009 width=70%}
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![установка browserpass](image/imagen10.png){#fig:010 width=70%}
 
 
 
 
 ## Сохранение пароля
 
-я добавил новый пароль (рис. [-@fig:001]) и сохранил его в каталоге password.
+я добавил новый пароль (рис. [-@fig:011]) и сохранил его в каталоге password.
 
             pass insert password/password
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![пароль](image/imagen11.png){#fig:011 width=70%}
 
 
 
 
-Потом я отобразил пароль (рис. [-@fig:001]).
+Потом я отобразил пароль (рис. [-@fig:012]).
 
             pass password/password
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![пароль](image/imagen12.png){#fig:012 width=70%}
 
 
 
 
-И заменил существующий пароль (рис. [-@fig:001]).
+И заменил существующий пароль (рис. [-@fig:013]).
 
             pass generate --in-place password/password
             
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![изменение пароля](image/imagen13.png){#fig:013 width=70%}
 
 
 
 ## Управление файлами конфигурации
 ### Дополнительное программное обеспечение
 
-Я установил несколько программных обеспечений (рис. [-@fig:001]).
+Я установил несколько программных обеспечений (рис. [-@fig:014]).
 
             sudo dnf -y install \
                  dunst \
@@ -519,99 +521,99 @@ other operating system
                  grim \
                  slurp
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![установка программ](image/imagen14.png){#fig:014 width=70%}
 
 
 
 
-Потом я установил шрифты (рис. [-@fig:001]).
+Потом я установил шрифты (рис. [-@fig:015]).
 
             sudo dnf copr enable peterwu/iosevka
             sudo dnf search iosevka
             sudo dnf install iosevka-fonts iosevka-aile-fonts iosevka-curly-fonts iosevka-slab-fonts iosevka-etoile-fonts iosevka-term-fonts
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![установка программ](image/imagen15.png){#fig:015 width=70%}
 
 
 ### Установка 
 
-Я установил бинарный файл chezmoi (рис. [-@fig:001]).
+Я установил бинарный файл chezmoi (рис. [-@fig:016]).
 
         sh -c "$(wget -qO- chezmoi.io/get)"
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![установка chezmoi](image/imagen16.png){#fig:016 width=70%}
 
 
 ### Создание собственного репозитория с помощью утилит
 
-Потом я копировал репозиторий dotfiles (рис. [-@fig:001]).
+Потом я копировал репозиторий dotfiles (рис. [-@fig:017]).
 
             gh repo create dotfiles --template="yamadharma/dotfiles-template" --private
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![копирование репозитория](image/imagen17.png){#fig:017 width=70%}
 
 
 ### Подключение репозитория к своей системе
 
-Затем я инициализировал chezmoi (рис. [-@fig:001]).
+Затем я инициализировал chezmoi (рис. [-@fig:018]).
 
-            chezmoi init git@github.com:<username>/dotfiles.git
+            chezmoi init git@github.com:qjarishekka/dotfiles.git
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
-
-
+![инициализация репозитории](image/imagen18.png){#fig:018 width=70%}
 
 
-И проверал изменения (рис. [-@fig:001]).
+
+
+И проверал изменения (рис. [-@fig:019]).
 
             chezmoi diff
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![проверка изменений](image/imagen19.png){#fig:019 width=70%}
 
 
 
 
 ### Использование chezmoi на нескольких машинах
 
-Для выполнения этой части я включил новую виртуальную машину. установил chezmoi и несколько пакетов для правильно работы и инициализировал chezmoi там. (рис. [-@fig:001]).
+Для выполнения этой части я включил новую виртуальную машину. установил chezmoi и несколько пакетов для правильно работы и инициализировал chezmoi там. (рис. [-@fig:020]).
 
             chezmoi init git@github.com:qjarishekka/dotfiles.git
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![инициализация репозитория](image/imagen20.jpg){#fig:020 width=70%}
 
 
-Затем я проверил изменения (рис. [-@fig:001]).
+Затем я проверил изменения (рис. [-@fig:021]).
 
             chezmoi diff
             
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![проверка изменений](image/imagen21.jpg){#fig:021 width=70%}
 
 
 
 
-И запускал команду (рис. [-@fig:001]).
+И запускал команду (рис. [-@fig:022]).
 
             chezmoi apply -v
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![принимать изменения](image/imagen22.jpg){#fig:022 width=70%}
 
 
-Потом я получил и применил последние изменения из моего репозитория (рис. [-@fig:001]).
+Потом я получил и применил последние изменения из моего репозитория (рис. [-@fig:023]).
 
             chezmoi update -v
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![принимать последние изменения](image/imagen23.jpg){#fig:023 width=70%}
 
 
 
 
 ### Ежедневные операции c chezmoi
 
-Здесь я извлек изменения из репозитория и применил их (рис. [-@fig:001]).
+Здесь я извлек изменения из репозитория и применил их (рис. [-@fig:024]).
 
             chezmoi update
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![Изменения](image/imagen24.png){#fig:024 width=70%}
 
 
 
@@ -619,37 +621,24 @@ other operating system
 
             chezmoi git pull -- --autostash --rebase && chezmoi diff
 
-Затем я применил изменения (рис. [-@fig:001])
+Затем я применил изменения (рис. [-@fig:025])
 
             chezmoi apply
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![Запуск на сервер](image/imagen25.png){#fig:025 width=70%}
 
 
-Дальше я проверял конфигурацию в файле ~/.config/chezmoi/chezmoi.toml (рис. [-@fig:001]).
+Дальше я проверял конфигурацию в файле ~/.config/chezmoi/chezmoi.toml (рис. [-@fig:026]).
 
             sudo nano ~/.config/chezmoi/chezmoi.toml
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![проверка конфигурации](image/imagen26.png){#fig:026 width=70%}
 
 
-
-
-
-
-
-
-
-
-Описываются проведённые действия, в качестве иллюстрации даётся ссылка на иллюстрацию
-
-(рис. [-@fig:001]).
-
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
 
 # Выводы
 
-Здесь кратко описываются итоги проделанной работы.
+В этой лабораторной работе, я смотрел процесс настройки и синхронизации репозитория с помощью chezmoi.
 
 # Список литературы{.unnumbered}
 
